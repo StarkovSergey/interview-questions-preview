@@ -1,0 +1,47 @@
+.markdown {
+  margin-top: 20px;
+  margin-bottom: 16px;
+
+  font-size: var(--fz-question);
+  font-weight: 700;
+  line-height: var(--lh-question);
+}
+
+.markdown p {
+  margin: 0;
+}
+
+.markdown code {
+  display: inline-block;
+
+  padding: 2px 4px;
+
+  font-family: 'Fira Code', 'Fira Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-size: var(--fz-question-code);
+  font-weight: 500;
+
+  background-color: var(--color-grey-light-40a);
+  border-radius: 3px;
+}
+
+@media (max-width: 420px) {
+  .question {
+    margin-top: 10px;
+  }
+}
+
+
+.author {
+  margin: 0;
+
+  font-size: var(--fz-link);
+}
+
+.link {
+  color: var(--color-blue-medium)
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: underline;
+}

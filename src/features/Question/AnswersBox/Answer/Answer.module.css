@@ -1,0 +1,78 @@
+.box {
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}
+
+.box + .box {
+  margin-top: 12px;
+}
+
+.label {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  padding: 12px 25px;
+
+  border-radius: 5px;
+
+  transition: background-color 200ms;
+}
+
+.label input {
+  margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+  .label {
+    padding: 10px 12px;
+  }
+
+  .label input {
+    margin-right: 12px;
+  }
+}
+
+.label:hover:not(.label--correct):not(.label--incorrect) {
+  background-color: var(--color-grey-light-40a);
+}
+
+.label--disabled {
+  cursor: initial;
+
+  color: var(--color-grey-medium);
+}
+
+.label--correct{
+  background-color: #e6ffec;
+}
+
+.label--incorrect{
+  background-color: #ffebe9;
+}
+
+.label--incomplete {
+  outline: 2px solid #ffd7d5;
+}
+
+.label--disabled:hover:not(.label--correct):not(.label--incorrect)  {
+  background-color: transparent;
+}
+
+.markdown p {
+  margin: 0;
+}
+
+.markdown code {
+  display: inline-block;
+
+  margin: 0 2px;
+  padding: 0px 4px;
+
+  font-family: 'Fira Code', 'Fira Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-size: var(--fz-answer-code);
+
+  background-color: var(--color-grey-light-40a);
+  border-radius: 6px;
+}

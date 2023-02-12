@@ -1,0 +1,11 @@
+.answers-box {
+  margin-top: 32px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 420px) {
+  .answers-box {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+}

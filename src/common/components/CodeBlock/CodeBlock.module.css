@@ -1,0 +1,5 @@
+.box {
+  font-size: var(--fz-question-code);
+
+  box-shadow: var(--shadow);
+}

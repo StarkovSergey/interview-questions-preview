@@ -1,0 +1,35 @@
+.box {
+
+}
+
+.title {
+  margin-top: 15px;
+  margin-bottom: 10px;
+
+  font-size: var(--fz-question);
+}
+
+.box p {
+  margin: 10px 0;
+}
+
+.box a {
+  color: var(--color-blue-medium);
+}
+
+.box a:hover,
+.box a:focus {
+  text-decoration: underline;
+}
+
+.box code {
+  display: inline-block;
+
+  padding: 0px 4px;
+
+  font-family: 'Fira Code', 'Fira Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-size: var(--fz-answer-code);
+
+  background-color: var(--color-grey-light-40a);
+  border-radius: 6px;
+}
