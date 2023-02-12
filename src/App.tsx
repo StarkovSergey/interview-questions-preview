@@ -7,7 +7,6 @@ import { ErrorFallback } from './features/Question/ErrorFallback/ErrorFallback'
 
 function App() {
   const [value, setValue] = useState(initialValue)
-  const [explode, setExplode] = useState(false)
 
   const editorHandler = (value: string) => {
     setValue(value)
@@ -16,8 +15,7 @@ function App() {
   return (
     <>
       <CodeEditor value={value} onChange={editorHandler} />
-      <ErrorBoundary FallbackComponent={ErrorFallback} resetKeys={[explode]} onReset={() => {
-        setExplode(false)
+      <ErrorBoundary FallbackComponent={ErrorFallback} resetKeys={[value]} onReset={() => {
       }}>
         <Question value={value} />
       </ErrorBoundary>
