@@ -5,14 +5,13 @@ import { QuestionText } from './QuestionText/QuestionText'
 import { TaskDescription } from './TaskDescription/TaskDescription'
 
 type PropsType = {
-  value: string
+  task: Task
 }
 
-export const Question = ({ value }: PropsType) => {
-  const obj = JSON.parse(value) as Task
+export const Question = (props: PropsType) => {
   const task = {
-    ...obj,
-    answers: obj.answers.map((answer, index) => ({
+    ...props.task,
+    answers: props.task.answers.map((answer, index) => ({
       ...answer,
       id: String(index)
     }))

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Question } from './features/Question/Question'
 import { ErrorBoundary } from 'react-error-boundary'
 import { ErrorFallback } from './features/Question/ErrorFallback/ErrorFallback'
+import { Task } from './types/types'
 
 function App() {
   const [value, setValue] = useState(initialValue)
@@ -12,12 +13,14 @@ function App() {
     setValue(value)
   }
 
+  const [task] = useState<Task>( () => JSON.parse(value) as Task)
+
   return (
     <>
       <CodeEditor value={value} onChange={editorHandler} />
       <ErrorBoundary FallbackComponent={ErrorFallback} resetKeys={[value]} onReset={() => {
       }}>
-        <Question value={value} />
+        <Question task={task} />
       </ErrorBoundary>
     </>
   )
