@@ -9,7 +9,6 @@ type PropsType = {
 }
 
 export const CodeEditor = ({ value, onChange }: PropsType) => {
-
   return (
     <CodeMirror
       value={value}
